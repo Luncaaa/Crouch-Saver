@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${version}",
+
+  "name": "${mod_name}",
+  "description": "Stops Minecraft from uncrouching you when opening chat, a GUI or losing window focus!",
+  "authors": ["Lucaaa"],
+  "contact": {
+    "homepage": "https://modrinth.com/project/crouch-saver",
+    "issues": "https://github.com/Luncaaa/Crouch-Saver/issues",
+    "sources": "https://github.com/Luncaaa/Crouch-Saver"
+  },
+
+  "license": "GPL-3.0",
+  "icon": "assets/crouchsaver/icon.png",
+
+  "environment": "client",
+  "entrypoints": {
+    "main": [ "me.lucaaa.crouchsaver.fabric.CrouchSaverFabric" ],
+    "modmenu": [ "me.lucaaa.crouchsaver.fabric.ModMenuIntegration" ]
+  },
+
+  "mixins": [
+    "crouchsaver.mixins.json"
+  ],
+
+  "accessWidener": "crouchsaver.accesswidener",
+
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "minecraft": "${minecraft_version_range}"
+  },
+
+  "suggests": {
+    "modmenu": ">=${modmenu_version}"
+  }
+}

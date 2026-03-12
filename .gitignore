@@ -1,0 +1,6 @@
+build/
+.gradle/
+test/
+*iml
+.idea/
+.architectury-transformer/

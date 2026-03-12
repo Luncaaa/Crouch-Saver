@@ -1,0 +1,7 @@
+{
+  "crouchsaver.name": "Crouch Saver",
+  "crouchsaver.options.crouch": "Sticky crouch",
+  "crouchsaver.options.crouch.tooltip": "Toggles whether the player should stay crouching when opening a GUI or not.",
+  "crouchsaver.options.ladder": "Ladder crouch",
+  "crouchsaver.options.ladder.tooltip": "Toggles whether the player should crouch when opening a GUI while on a ladder or not."
+}

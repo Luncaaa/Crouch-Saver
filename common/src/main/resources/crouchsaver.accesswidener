@@ -1,0 +1,6 @@
+accessWidener v2 named
+accessible class net/minecraft/client/Options$FieldAccess
+accessible class net/minecraft/client/Options$OptionAccess
+accessible class net/minecraft/client/gui/components/OptionsList$Entry
+accessible method net/minecraft/client/gui/components/OptionsList$Entry <init> (Ljava/util/List;Lnet/minecraft/client/gui/screens/Screen;)V
+accessible method net/minecraft/client/gui/components/AbstractSelectionList addEntry (Lnet/minecraft/client/gui/components/AbstractSelectionList$Entry;)I

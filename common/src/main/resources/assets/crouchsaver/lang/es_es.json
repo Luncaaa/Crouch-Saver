@@ -1,0 +1,7 @@
+{
+  "crouchsaver.name": "Crouch Saver",
+  "crouchsaver.options.crouch": "Mantener agache",
+  "crouchsaver.options.crouch.tooltip": "Cambia si el jugador se mantiene agachado cuando abre una interfaz o no.",
+  "crouchsaver.options.ladder": "Agache en escalera",
+  "crouchsaver.options.ladder.tooltip": "Cambia si el jugador se agacha cuando abre una interfaz estando en una escalera de mano o no"
+}
