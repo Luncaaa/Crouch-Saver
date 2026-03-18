@@ -83,4 +83,13 @@ tasks {
     shadowJar {
         enabled = false
     }
+	
+	register("publishAll") {
+        group = "publishing"
+        description = "Builds everything and publishes to all platforms."
+
+        dependsOn(":mod:fabric:publishMods")
+        dependsOn(":mod:forge:publishMods")
+        dependsOn(":mod:neoforge:publishMods")
+    }
 }
