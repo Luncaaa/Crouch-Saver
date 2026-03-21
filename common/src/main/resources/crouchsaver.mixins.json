@@ -8,7 +8,8 @@
     "KeyMappingMixin",
     "OptionsMixin",
     "ControlsScreenMixin",
-    "OptionsSubScreenMixin"
+    "OptionsSubScreenMixin",
+    "MinecraftMixin"
   ],
   "server": [],
   "injectors": {

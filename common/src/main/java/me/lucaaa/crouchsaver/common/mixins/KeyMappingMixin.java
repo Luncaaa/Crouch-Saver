@@ -11,13 +11,14 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(KeyMapping.class)
 public class KeyMappingMixin {
-    @Unique private static boolean crouchSaver$openedGUI;
+    @Unique private boolean crouchSaver$openedGUI;
 
     @Inject(method = "setDown", at = @At("HEAD"), cancellable = true)
     private void keepCrouching(boolean down, CallbackInfo ci) {
-        Minecraft minecraft = Minecraft.getInstance();
+        if (!CrouchSaverMod.isCrouchEnabled()) return;
 
-        if (minecraft.level == null || !CrouchSaverMod.isCrouchEnabled()) return;
+        Minecraft minecraft = Minecraft.getInstance();
+        if (minecraft.level == null) return;
 
         if (minecraft.options.keyShift.same((KeyMapping) (Object) this)) {
 
