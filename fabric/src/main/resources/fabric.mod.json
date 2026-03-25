@@ -4,7 +4,7 @@
   "version": "${version}",
 
   "name": "${mod_name}",
-  "description": "Stops Minecraft from uncrouching you when opening chat, a GUI or losing window focus!",
+  "description": "Keep crouching when opening a GUI or crouch when opening one on a ladder!",
   "authors": ["Lucaaa"],
   "contact": {
     "homepage": "https://modrinth.com/project/crouch-saver",

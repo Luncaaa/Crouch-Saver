@@ -1,5 +1,5 @@
 # Crouch Saver
-Keep crouching when opening a GUI or crouch when doing so on a ladder!
+Keep crouching when opening a GUI or crouch when opening one on a ladder!
 
 Download from [Modrinth](https://modrinth.com/project/crouch-saver) or [CurseForge](https://www.curseforge.com/minecraft/mc-mods/crouch-saver)
 
