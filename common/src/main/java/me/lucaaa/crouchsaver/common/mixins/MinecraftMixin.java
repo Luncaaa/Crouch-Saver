@@ -10,7 +10,6 @@ import org.jetbrains.annotations.Nullable;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
-import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -29,8 +28,6 @@ public class MinecraftMixin {
     @Final
     public Options options;
 
-    @Unique private boolean crouchSaver$modPressed;
-
     @Inject(method = "setScreen", at = @At("HEAD"))
     private void setScreen(Screen screen, CallbackInfo ci) {
         if (!CrouchSaverMod.isLadderEnabled()) return;
@@ -40,14 +37,14 @@ public class MinecraftMixin {
         // If a screen is being set, mark the keybind as pressed by the mod so KeyMappingMixin keeps the player down.
         if (screen != null) {
             if (!options.keyShift.isDown()) {
-                crouchSaver$modPressed = true;
+                CrouchSaverMod.modPressed = true;
                 options.keyShift.setDown(true);
             }
 
         // Otherwise, if the screen is being closed and the crouch keybind was pressed by the mod, free it.
-        } else if (crouchSaver$modPressed) {
+        } else if (CrouchSaverMod.modPressed) {
+            CrouchSaverMod.modPressed = false;
             options.keyShift.setDown(false);
-            crouchSaver$modPressed = false;
         }
     }
 }

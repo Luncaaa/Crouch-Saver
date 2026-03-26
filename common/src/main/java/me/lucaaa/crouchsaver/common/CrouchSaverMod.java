@@ -10,6 +10,8 @@ public abstract class CrouchSaverMod {
     public static final String ID = "crouchsaver";
     public static final Logger LOGGER = LoggerFactory.getLogger(ID);
 
+    public static boolean modPressed = false;
+
     public static final OptionInstance<Boolean> CROUCH_ENABLED = OptionInstance.createBoolean(
             "crouchsaver.options.crouch",
             OptionInstance.cachedConstantTooltip(Component.translatable("crouchsaver.options.crouch.tooltip")),

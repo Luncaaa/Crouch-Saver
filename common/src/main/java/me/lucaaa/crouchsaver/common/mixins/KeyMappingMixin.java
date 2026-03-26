@@ -15,16 +15,13 @@ public class KeyMappingMixin {
 
     @Inject(method = "setDown", at = @At("HEAD"), cancellable = true)
     private void keepCrouching(boolean down, CallbackInfo ci) {
-        if (!CrouchSaverMod.isCrouchEnabled()) return;
-
         Minecraft minecraft = Minecraft.getInstance();
         if (minecraft.level == null) return;
 
         if (minecraft.options.keyShift.same((KeyMapping) (Object) this)) {
-
             if (!down) {
                 // If crouching is going to be removed, only cancel the event if the window is not focused or the player is in an inv/chat.
-                if (crouchSaver$isStickyApplicable()) {
+                if (crouchSaver$isStickyApplicable() && (CrouchSaverMod.isCrouchEnabled() || CrouchSaverMod.modPressed)) {
                     crouchSaver$openedGUI = true;
                     ci.cancel();
 

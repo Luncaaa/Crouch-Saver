@@ -4,8 +4,8 @@ plugins {
     id("java")
     id("me.modmuss50.mod-publish-plugin") version("latest.release")
     id("com.gradleup.shadow") version("latest.release")
-    id("dev.architectury.loom") version("latest.release") apply false
-    id("architectury-plugin") version("3.4-SNAPSHOT")
+    id("dev.architectury.loom") version("1.13-SNAPSHOT") apply false
+    id("architectury-plugin") version("3.5-SNAPSHOT")
 }
 
 val maven_group: String by project
