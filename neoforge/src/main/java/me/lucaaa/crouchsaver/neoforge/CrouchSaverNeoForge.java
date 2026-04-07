@@ -8,6 +8,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 
+/* TODO: Try using KeyboardHandler mixins instead of KeyMapping */
 @Mod(value = CrouchSaverMod.ID, dist = Dist.CLIENT)
 public class CrouchSaverNeoForge extends CrouchSaverMod {
     public CrouchSaverNeoForge(ModContainer container) {
